@@ -62,6 +62,7 @@ header {
   height: 50px;
   margin-bottom: 10px;
   text-transform: capitalize;
+  z-index: 99;
   box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.463);
 }
 header ul {
@@ -92,7 +93,6 @@ header ul li:not(li.name) {
   text-transform: capitalize;
   line-height: 2;
   background-image: linear-gradient(170deg, #ececec 80%, white 80%);
-  z-index: 99;
 }
 .landing .container {
   padding-top: 100px;
@@ -124,26 +124,25 @@ header ul li:not(li.name) {
 /* end landing */
 /* start articles */
 .articles {
-  margin-top: 100px;
+  margin-top: 250px;
+  position: relative;
 }
 .articles button {
   background: white;
   border: 1px solid var(--main-color);
   font-size: 25px;
   text-transform: capitalize;
-  /* font-weight: bold; */
-  /* padding: 11px; */
   height: 50px;
   width: 150px;
 }
 .articles .container {
-  margin-top: 20px;
+  padding-top: 50px;
   display: grid;
-  grid-template-columns: repeat(4, minmax(300px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 20px;
 }
 .articles .art {
-  width: 95%;
+  /* width: 100%; */
   border: 1px solid white;
   border-radius: 10px;
   box-shadow: #00000066 0px 0px 9px 0px;
@@ -153,8 +152,34 @@ header ul li:not(li.name) {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 }
+.articles .art h2 {
+  padding: 10px;
+  text-transform: capitalize;
+}
 .articles .art p {
+  padding-left: 15px;
+  padding-right: 10px;
+  color: #777;
   line-height: 1.5;
   text-transform: capitalize;
+}
+.articles .art span {
+  color: var(--main-color);
+  border-top: 1px solid var(--main-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  margin-top: 15px;
+  position: relative;
+}
+.articles .art span p {
+  font-weight: bold;
+  color: var(--main-color);
+}
+.articles .art span i {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
 }
 /* end articles */
