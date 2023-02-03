@@ -1,0 +1,152 @@
+/* start global rules */
+:root {
+  --main-color: #1d95f6;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* ::selection {
+  selection properties
+} */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* small screen */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end global rules  */
+/* start header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  font-size: 20px;
+  padding-top: 15px;
+  height: 50px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.463);
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+}
+header ul .pages {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+header ul li {
+  cursor: pointer;
+}
+header ul li.name {
+  font-weight: bold;
+  color: var(--main-color);
+}
+header ul li:not(li.name) {
+  font-weight: 300;
+}
+/* end header */
+/* start landing */
+.landing {
+  margin-top: 50px;
+  /* background-color: #ececec; */
+  height: 600px;
+  text-transform: capitalize;
+  line-height: 2;
+  background-image: linear-gradient(170deg, #ececec 80%, white 80%);
+}
+.landing .container {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.landing svg {
+  position: absolute;
+  z-index: -1;
+  height: 770px;
+}
+.landing h1 {
+  margin: 0;
+}
+.landing img {
+  width: 50%;
+}
+.landing i {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  color: var(--main-color);
+  font-size: 36px;
+  transform: translate(-50%);
+  cursor: pointer;
+}
+/* end landing */
+/* start articles */
+.articles {
+  margin-top: 100px;
+}
+.articles button {
+  background: white;
+  border: 1px solid var(--main-color);
+  font-size: 25px;
+  text-transform: capitalize;
+  /* font-weight: bold; */
+  /* padding: 11px; */
+  height: 50px;
+  width: 150px;
+}
+.articles .container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(300px, 1fr));
+}
+.articles .art {
+  width: 100%;
+}
+.articles .art img {
+  width: 90%;
+  border-radius: 10px;
+}
+.articles .art p {
+}
+/* end articles */
