@@ -74,7 +74,6 @@ ul {
   background-color: var(--main-color);
   top: 50%;
   transition: 1s;
-  z-index: -1;
   transform: translate(-50%);
 }
 .title::after {
