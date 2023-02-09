@@ -228,7 +228,6 @@ header ul li:not(li.name) {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
-  margin-top: 50px;
 }
 .gallery .container .box {
   background-color: white;
@@ -245,5 +244,94 @@ header ul li:not(li.name) {
   transform: rotate(5deg) scale(1.05);
 }
 /* end gallery */
+/* start features */
+.features {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  transition: 1s;
+}
+.features .container .box {
+  z-index: 1;
+  position: relative;
+  box-shadow: #00000066 0px 0px 9px 0px;
+  transition: 1s;
+  height: 550px;
+  background-color: red;
+}
+.features .container .box:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 80%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    195deg,
+    rgba(0, 0, 255, 0.226) 70%,
+    transparent 70%
+  );
+  z-index: 0;
+  transition: 1s;
+}
+.features .container .box:hover::before {
+  opacity: 0;
+}
+.features .container .box .txt {
+  z-index: 55;
+  background-image: linear-gradient(15deg, white 70%, transparent 70%);
+  transform: translateY(-100%);
+  height: 100%;
+  text-align: center;
+  transition: 1s all;
+}
+.features .container .box:hover .txt {
+  height: 60%;
+}
+.features .container .box:hover .txt h1 {
+  transform: translateY(250%);
+}
+.features .container .box .txt h1 {
+  transform: translateY(500%);
+  transition: 1s;
+}
+.features .container .box:hover .txt p {
+  transform: translateY(90%);
+}
+.features .container .box .txt p {
+  transform: translateY(200%);
+  transition: 1s;
+  font-size: 18px;
+  color: #777;
+}
+.features .container .box .txt button {
+  transition: 1s;
+  transform: translateY(650%);
+  padding: 10px 20px;
+  border: 1px solid var(--main-color);
+  background-color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: var(--main-color) 0px 0px 9px 0px;
+}
+.features .container .box:hover .txt button {
+  transform: translateY(250%);
+}
+.features .container .box .txt h1 {
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+.features .container .box .txt p {
+  line-height: 2;
+}
+.features .container .box img {
+  width: 100%;
+  z-index: 1;
+}
+/* end features */
 /* start animation */
 /* end animation */
